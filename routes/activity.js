@@ -69,7 +69,7 @@ exports.edit = function (req, res) {
  * POST Handler for /save/ route of Activity.
  */
 exports.save = function (req, res) {
-    
+    alert("saving");
     console.log("5 -- For Save");	
     console.log("4");	
     console.log("3");	
@@ -87,7 +87,7 @@ exports.save = function (req, res) {
  * POST Handler for /execute/ route of Activity.
  */
 exports.execute = function (req, res) {
-
+    alert("executing!!");
     console.log("5 -- For Execute");	
     console.log("4");	
     console.log("3");	
