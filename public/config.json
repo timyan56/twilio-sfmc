@@ -21,7 +21,7 @@
                 }               
             ],
             "outArguments": [],
-            "url": "https://twillio-sfmc.azurewebsites.net/journeybuilder/execute",
+            "url": "https://webapp-230308145145.azurewebsites.net/journeybuildercustomactivity/execute",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -32,7 +32,7 @@
     "configurationArguments": {
       "applicationExtensionKey": "e962d1d4-8b07-4e76-89be-ecd1f1423b6d",
        "save": {
-           "url": "https://twillio-sfmc.azurewebsites.net/save",
+           "url": "https://webapp-230308145145.azurewebsites.net/journeybuildercustomactivity/save",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -40,7 +40,7 @@
             "timeout": 2000
        },
        "publish": {
-           "url": "https://twillio-sfmc.azurewebsites.net/publish",
+           "url": "https://webapp-230308145145.azurewebsites.net/journeybuildercustomactivity/publish",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -48,7 +48,7 @@
             "timeout": 2000
        },
        "validate": {
-           "url": "https://twillio-sfmc.azurewebsites.net/validate",
+           "url": "https://webapp-230308145145.azurewebsites.net/journeybuildercustomactivity/validate",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -56,7 +56,7 @@
             "timeout": 2000
        },
        "stop": {
-           "url": "https://twillio-sfmc.azurewebsites.net/stop",
+           "url": "https://webapp-230308145145.azurewebsites.net/journeybuildercustomactivity/stop",
             "verb": "POST",
             "body": "",
             "format": "json",
