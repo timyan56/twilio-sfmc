@@ -99,9 +99,10 @@ define([
             "accountSid": accountSid,
             "authToken": authToken,
             "messagingService": messagingService,
-            "body": body,
-            "to": "{{Contact.Attribute.tim_testing.Phone}}",
-            "emailAddress": "{{Contact.Default.EmailAddress}}" //<----This should map to your data extension name and phone number column
+            "bo dy": body,
+            //"to": "{{Contact.Attribute.tim_testing.Phone}}"
+            "to": "{{Contact.Default.MobilePhone}}"
+            //"emailAddress": "{{Contact.Default.EmailAddress}}" //<----This should map to your data extension name and phone number column
         }];
 
         payload['metaData'].isConfigured = true;
