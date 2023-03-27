@@ -12,6 +12,7 @@ define([
         { "label": "Create SMS Message", "key": "step1" }
     ];
     var currentStep = steps[0].key;
+    var eventDefinitionKey;
 
     $(window).ready(onRender);
 
@@ -20,6 +21,14 @@ define([
     connection.on('requestedEndpoints', onGetEndpoints);
 
     connection.on('clickedNext', save);
+    connection.on("requestedTriggerEventDefinition", function (
+        eventDefinitionModel
+      ) {
+        if (eventDefinitionModel) {
+          eventDefinitionKey = eventDefinitionModel.eventDefinitionKey;
+          console.log("event definition key: " + eventDefinitionKey);
+        }
+      });
     //connection.on('clickedBack', onClickedBack);
     //connection.on('gotoStep', onGotoStep);
 
