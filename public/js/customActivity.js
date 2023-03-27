@@ -21,7 +21,8 @@ define([
     connection.on('requestedEndpoints', onGetEndpoints);
 
     connection.on('clickedNext', save);
-    connection.on("requestedTriggerEventDefinition", onEventTrigger);
+    connection.on('requestedTriggerEventDefinition', onEventTrigger);
+    connection.on('requestedInteractionDefaults', onInteractionDefaults);
     //connection.on('clickedBack', onClickedBack);
     //connection.on('gotoStep', onGotoStep);
 
@@ -30,7 +31,7 @@ define([
         connection.trigger('ready');
         connection.trigger('requestTokens');
         connection.trigger('requestEndpoints');
-        connection.trigger("requestedTriggerEventDefinition");
+        connection.trigger('requestedTriggerEventDefinition');
     }
 
   function initialize(data) {
@@ -110,7 +111,8 @@ define([
 
         console.log("Payload on SAVE function: "+JSON.stringify(payload));
         connection.trigger('updateActivity', payload);
-
+        connection.trigger("requestedTriggerEventDefinition");
+        connection.trigger('requestInteraction');
     }                    
 
     function onEventTrigger (eventDefinitionModel) 
@@ -121,4 +123,8 @@ define([
         }
     }
     
+    function onInteractionDefaults(settings)
+    {
+        console.log("interaction settings: " + JSON.stringify(settings));
+    }
 });
