@@ -21,14 +21,7 @@ define([
     connection.on('requestedEndpoints', onGetEndpoints);
 
     connection.on('clickedNext', save);
-    connection.on("requestedTriggerEventDefinition", function (
-        eventDefinitionModel
-      ) {
-        if (eventDefinitionModel) {
-          eventDefinitionKey = eventDefinitionModel.eventDefinitionKey;
-          console.log("event definition key: " + eventDefinitionKey);
-        }
-      });
+    connection.on("requestedTriggerEventDefinition", onEventTrigger);
     //connection.on('clickedBack', onClickedBack);
     //connection.on('gotoStep', onGotoStep);
 
@@ -37,6 +30,7 @@ define([
         connection.trigger('ready');
         connection.trigger('requestTokens');
         connection.trigger('requestEndpoints');
+        connection.trigger("requestedTriggerEventDefinition");
     }
 
   function initialize(data) {
@@ -119,4 +113,12 @@ define([
 
     }                    
 
+    function onEventTrigger (eventDefinitionModel) 
+    {
+        console.log("event definition: " + JSON.stringify(eventDefinitionKey));
+        if (eventDefinitionModel) {
+          eventDefinitionKey = eventDefinitionModel.eventDefinitionKey;
+        }
+    }
+    
 });
