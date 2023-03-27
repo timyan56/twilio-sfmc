@@ -21,7 +21,7 @@
                 }               
             ],
             "outArguments": [],
-            "url": "https://webhook.site/ddbf1e79-6096-4e36-9098-83c852784132/journeybuildercustomactivity/execute",
+            "url": "https://webapp-230308145145.azurewebsites.net/journeybuildercustomactivity/execute",
             "verb": "POST",
             "body": "",
             "format": "json",
