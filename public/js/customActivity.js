@@ -32,6 +32,7 @@ define([
         connection.trigger('requestTokens');
         connection.trigger('requestEndpoints');
         connection.trigger('requestedTriggerEventDefinition');
+        connection.trigger('requestedInteractionDefaults');
     }
 
   function initialize(data) {
@@ -111,6 +112,9 @@ define([
 
         console.log("Payload on SAVE function: "+JSON.stringify(payload));
         connection.trigger('updateActivity', payload);
+
+        connection.trigger('requestedTriggerEventDefinition');
+        connection.trigger('requestedInteractionDefaults');
     }                    
 
     function onEventTrigger (eventDefinitionModel) 
