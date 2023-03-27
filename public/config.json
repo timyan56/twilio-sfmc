@@ -7,9 +7,8 @@
     "type": "REST",
     "lang": {
        "en-US": {
-           "name": "Twilio SMS",
-           "description": "Send Twilio SMS with Journey Builder",
-           "TwilioMessage":"test"
+           "name": "Sleekflow Send Message",
+           "description": "Send WhatsaApp Cloud Api Template Message with Journey Builder"
        }
     },
     "arguments": {
